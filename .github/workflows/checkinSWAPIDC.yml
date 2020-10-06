@@ -34,5 +34,5 @@ jobs:
           SITE: ${{ secrets.SITE }}
           NAME: ${{ secrets.NAME }}
           PSWD: ${{ secrets.PSWD }}
-          run: python checkin.py
+        run: python checkin.py
 
