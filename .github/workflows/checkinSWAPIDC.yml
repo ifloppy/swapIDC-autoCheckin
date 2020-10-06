@@ -29,10 +29,9 @@ jobs:
         pip install flake8 pytest
         if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
     - name: Main
-      run: |
-        env:
-          SITE: ${{ secrets.SITE }}
-          NAME: ${{ secrets.NAME }}
-          PSWD: ${{ secrets.PSWD }}
-        run: python checkin.py
+      env:
+        SITE: ${{ secrets.SITE }}
+        NAME: ${{ secrets.NAME }}
+        PSWD: ${{ secrets.PSWD }}
+      run: python checkin.py
 
